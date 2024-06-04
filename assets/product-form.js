@@ -36,7 +36,7 @@ if (!customElements.get('product-form')) {
             0
           );
         console.log('prbar');
-        console.log(formData.getAll())
+        //console.log(formData.getAll())
         if (this.cart) {
           formData.append(
             'sections',
