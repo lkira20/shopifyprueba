@@ -23,13 +23,13 @@ if (!customElements.get('product-form')) {
           //obtengo el listado de productos
         fetch(`/clear.js`, {method: 'POST'})
           .then(function(response){
-            console.log('test ner', response.json())
+            return response.json();
           })
-          /*
           .then((response) => {
-            console.log(response)
+            console.log('prueba prueba', response)
       
           })
+          /*
           .catch((e) => {
             console.error(e);
           }
