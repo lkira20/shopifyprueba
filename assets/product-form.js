@@ -104,7 +104,11 @@ if (!customElements.get('product-form')) {
         fetch(`${routes.cart_url}`, {method: 'POST'})
         .then(response => response.json())
         .then(response => console.log(response))
-      
+        
+        let updates = {
+          794864053: 2,
+          794864233: 3
+        };
         fetch(`${routes.cart_url}`+ `/update.js`, {method: 'POST'})
         .then(response => response.json())
         .then(response => console.log(response))
