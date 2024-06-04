@@ -47,6 +47,7 @@ if (!customElements.get('product-form')) {
         fetch(`${routes.cart_add_url}`, config)
           .then((response) => response.json())
           .then((response) => {
+            /*
             if (response.status) {
               publish(PUB_SUB_EVENTS.cartError, {
                 source: 'product-form',
@@ -90,18 +91,17 @@ if (!customElements.get('product-form')) {
             } else {
               this.cart.renderContents(response);
             }
+            */
           })
           .catch((e) => {
             console.error(e);
           })
-          /*
           .finally(() => {
             this.submitButton.classList.remove('loading');
             if (this.cart && this.cart.classList.contains('is-empty')) this.cart.classList.remove('is-empty');
             if (!this.error) this.submitButton.removeAttribute('aria-disabled');
             this.querySelector('.loading__spinner').classList.add('hidden');
           });
-        */
         
         /*
         console.log(`${routes.cart_url}`)
