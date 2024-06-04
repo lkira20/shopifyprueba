@@ -40,7 +40,9 @@ if (!customElements.get('product-form')) {
           this.cart.setActiveElement(document.activeElement);
         }
         config.body = formData;
-        fetch(`/cart/clear.js`, {method: 'POST'})
+        fetch(`/cart.js`, {method: 'POST'})
+        .then(response => response.json())
+        .then(response => console.log(response))
         
         fetch(`${routes.cart_add_url}`, config)
           .then((response) => response.json())
