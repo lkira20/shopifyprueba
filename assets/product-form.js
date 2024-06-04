@@ -23,10 +23,8 @@ if (!customElements.get('product-form')) {
         console.log('probar', `${routes.cart_url}`)
           
         fetch(`${routes.cart_url}`)
-          .then((response) => response)
-          .then((response) => {
-
-          })
+          .then((response) => console.log(response, 'test'))
+          //.then((response) => {})
           /*
           .then((response) => {
             console.log('listado de productos')
