@@ -22,6 +22,7 @@ if (!customElements.get('product-form')) {
         
           //obtengo el listado de productos
         fetch(`/clear.js`, {method: 'POST'})
+          /*
           .then(function(response){
             return response.json();
           })
@@ -29,6 +30,7 @@ if (!customElements.get('product-form')) {
             console.log('prueba prueba', response)
       
           })
+          */
           /*
           .catch((e) => {
             console.error(e);
