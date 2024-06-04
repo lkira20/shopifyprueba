@@ -42,7 +42,7 @@ if (!customElements.get('product-form')) {
         config.body = formData;
         fetch(`${routes.cart_url}`+ `/clear.js`, {method: 'POST'})
 
-        console.log(`${routes.cart_add_url}`)
+        console.log(`${routes.cart_add_url}`, 'test')
         /*
         fetch(`${routes.cart_add_url}`, config)
           .then((response) => response.json())
