@@ -19,6 +19,7 @@ if (!customElements.get('product-form')) {
       onSubmitHandler(evt) {
         evt.preventDefault();
         //aqui debo hacer el codigo para obtener los productos y luego eliminarlos
+        console.log('probar', `${routes.cart_url}`)
         fetch(`${routes.cart_url}`)
           .then((response) => response.json())
           .then((response) => {
