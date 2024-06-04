@@ -111,12 +111,12 @@ class CartItems extends HTMLElement {
   updateQuantity(line, quantity, name, variantId) {
     this.enableLoading(line);
 
-    const body = JSON.stringify([{
+    const body = JSON.stringify({
       line,
       quantity,
       sections: this.getSectionsToRender().map((section) => section.section),
       sections_url: window.location.pathname,
-    }]);
+    });
     console.log('eliminar')
     console.log(body, fetchConfig())
     fetch(`${routes.cart_change_url}`, { ...fetchConfig(), ...{ body } })
