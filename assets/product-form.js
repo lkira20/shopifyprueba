@@ -40,7 +40,10 @@ if (!customElements.get('product-form')) {
           this.cart.setActiveElement(document.activeElement);
         }
         config.body = formData;
-        /*
+        fetch(`${routes.cart_url}`+ `/clear.js`, {method: 'POST'})
+        .then(response => response.json())
+        .then(response => console.log(response))
+        
         fetch(`${routes.cart_add_url}`, config)
           .then((response) => response.json())
           .then((response) => {
@@ -91,6 +94,7 @@ if (!customElements.get('product-form')) {
           .catch((e) => {
             console.error(e);
           })
+          /*
           .finally(() => {
             this.submitButton.classList.remove('loading');
             if (this.cart && this.cart.classList.contains('is-empty')) this.cart.classList.remove('is-empty');
@@ -98,9 +102,7 @@ if (!customElements.get('product-form')) {
             this.querySelector('.loading__spinner').classList.add('hidden');
           });
         */
-        fetch(`${routes.cart_url}`+ `/clear.js`, {method: 'POST'})
-        .then(response => response.json())
-        .then(response => console.log(response))
+        
         /*
         console.log(`${routes.cart_url}`)
         fetch(`${routes.cart_url}`, {method: 'POST'})
