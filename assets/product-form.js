@@ -40,8 +40,8 @@ if (!customElements.get('product-form')) {
           this.cart.setActiveElement(document.activeElement);
         }
         config.body = formData;
-        console.log('new test');
-        console.log(this.form)
+        console.log('new test prueba');
+        console.log(JSON.stringify(config.body))
         fetch(`${routes.cart_add_url}`, config)
           .then((response) => response.json())
           .then((response) => {
