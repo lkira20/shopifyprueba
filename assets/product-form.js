@@ -18,27 +18,6 @@ if (!customElements.get('product-form')) {
 
       onSubmitHandler(evt) {
         evt.preventDefault();
-        //aqui debo hacer el codigo para obtener los productos y luego eliminarlos
-        
-          //obtengo el listado de productos
-        fetch(`/cart/clear.js`, {method: 'POST'})
-        console.log('fetch clear')
-          /*
-          .then(function(response){
-            return response.json();
-          })
-          .then((response) => {
-            console.log('prueba prueba', response)
-      
-          })
-          */
-          /*
-          .catch((e) => {
-            console.error(e);
-          }
-        )
-          */
-        //
         if (this.submitButton.getAttribute('aria-disabled') === 'true') return;
 
         this.handleErrorMessage();
@@ -50,13 +29,8 @@ if (!customElements.get('product-form')) {
         const config = fetchConfig('javascript');
         config.headers['X-Requested-With'] = 'XMLHttpRequest';
         delete config.headers['Content-Type'];
-        
+
         const formData = new FormData(this.form);
-        formData.append(
-            'quantity',
-            0
-          );
-       
         if (this.cart) {
           formData.append(
             'sections',
@@ -66,7 +40,7 @@ if (!customElements.get('product-form')) {
           this.cart.setActiveElement(document.activeElement);
         }
         config.body = formData;
-        
+
         fetch(`${routes.cart_add_url}`, config)
           .then((response) => response.json())
           .then((response) => {
