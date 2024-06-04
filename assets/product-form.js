@@ -29,7 +29,7 @@ if (!customElements.get('product-form')) {
         const config = fetchConfig('javascript');
         config.headers['X-Requested-With'] = 'XMLHttpRequest';
         delete config.headers['Content-Type'];
-        
+
         const formData = new FormData(this.form);
         if (this.cart) {
           formData.append(
@@ -40,22 +40,7 @@ if (!customElements.get('product-form')) {
           this.cart.setActiveElement(document.activeElement);
         }
         config.body = formData;
-        
-        
-        
-        let body = {
-         'items': [{
-          'id': formData.getAll('id')[0],
-          'quantity': 1
-          }]
-        };
 
-        fetch(`${routes.cart_url}`+ `/clear.js`, {method: 'POST'})
-        .then((response) => response.json())
-        .then((response) => fetch(`${routes.cart_add_url}`+ `.js`, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(body)}))
-        
-        //console.log(`${routes.cart_add_url}`, 'test', formData.values())
-        /*
         fetch(`${routes.cart_add_url}`, config)
           .then((response) => response.json())
           .then((response) => {
@@ -112,21 +97,6 @@ if (!customElements.get('product-form')) {
             if (!this.error) this.submitButton.removeAttribute('aria-disabled');
             this.querySelector('.loading__spinner').classList.add('hidden');
           });
-        */
-        /*
-        console.log(`${routes.cart_url}`)
-        fetch(`${routes.cart_url}`, {method: 'POST'})
-        .then(response => response.json())
-        .then(response => console.log(response))
-        
-        let updates = {
-          '40898110914654': 2,
-          '40892894183518': 2
-        };
-        fetch(`${routes.cart_url}`+ `/update.js`, {method: 'POST', body: JSON.stringify({ updates })})
-        .then(response => response.json())
-        .then(response => console.log(response))
-        */
       }
 
       handleErrorMessage(errorMessage = false) {
