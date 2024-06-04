@@ -24,8 +24,8 @@ if (!customElements.get('product-form')) {
         fetch(`${routes.cart_url}`+'.js')
           .then((response) => response.json())
           .then((response) => {
-            console.log(response.items.count)
-            if(response.items.count){
+            console.log(response.items.length)
+            if(response.items.length > 0){
               
             }
           })
