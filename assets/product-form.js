@@ -19,7 +19,12 @@ if (!customElements.get('product-form')) {
       onSubmitHandler(evt) {
         evt.preventDefault();
         //aqui debo hacer el codigo para obtener los productos y luego eliminarlos
-        console.log('test', window.routes)
+        fetch(`${routes.cart_url}`, config)
+          .then((response) => response.json())
+          .then((response) => {
+            console.log('listado de productos')
+            console.log(response)
+          })
         //
         if (this.submitButton.getAttribute('aria-disabled') === 'true') return;
 
