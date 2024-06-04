@@ -22,7 +22,7 @@ if (!customElements.get('product-form')) {
         
         console.log('probar', `${routes.cart_url}`)
           
-        fetch(`${routes.cart_url}`)
+        fetch(`${routes.cart_url}`+'.js')
           .then((response) => console.log(response, 'test'))
           //.then((response) => {})
           /*
