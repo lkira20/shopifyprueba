@@ -21,7 +21,7 @@ if (!customElements.get('product-form')) {
         //aqui debo hacer el codigo para obtener los productos y luego eliminarlos
         
           //obtengo el listado de productos
-        fetch(`clear.js`)
+        fetch(`/clear.js`)
           .then((response) => response.json())
           .then((response) => {
             console.log(response)
