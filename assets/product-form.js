@@ -44,7 +44,7 @@ if (!customElements.get('product-form')) {
         console.log('formData', formData.getAll('id'))
         fetch(`${routes.cart_add_url}`+ `.js`, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: {
          'items': [{
-          'id': formData.getAll('id')[0],
+          'id': JSON.stringify(formData.getAll('id')[0]),
           'quantity': 1
           }]
         }})
