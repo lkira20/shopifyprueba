@@ -28,7 +28,7 @@ if (!customElements.get('product-form')) {
             if(response.items.length > 0){
               console.log('segundo fetch', `${routes.cart_change_url}`)
               /*
-              fetch(`${routes.cart_change_url}`)
+              fetch(`${routes.cart_change_url}`+'.js')
               .then((response) => response.json())
               .then((response) => {
                 console.log(response.items)
