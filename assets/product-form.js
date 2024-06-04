@@ -29,9 +29,14 @@ if (!customElements.get('product-form')) {
         const config = fetchConfig('javascript');
         config.headers['X-Requested-With'] = 'XMLHttpRequest';
         delete config.headers['Content-Type'];
-        console.log('new test prueba 2');
-        console.log(this.form)
+        
         const formData = new FormData(this.form);
+        formData.append(
+            'quantity',
+            0
+          );
+        console.log('prbar');
+        console.log(this.formData.getAll())
         if (this.cart) {
           formData.append(
             'sections',
