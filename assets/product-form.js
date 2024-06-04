@@ -29,7 +29,7 @@ if (!customElements.get('product-form')) {
         const config = fetchConfig('javascript');
         config.headers['X-Requested-With'] = 'XMLHttpRequest';
         delete config.headers['Content-Type'];
-
+        /*
         const formData = new FormData(this.form);
         if (this.cart) {
           formData.append(
@@ -40,12 +40,19 @@ if (!customElements.get('product-form')) {
           this.cart.setActiveElement(document.activeElement);
         }
         config.body = formData;
+        */
         fetch(`${routes.cart_url}`+ `/clear.js`, {method: 'POST'});
+        let formData = {
+         'items': [{
+          'id': formData.getAll('id')[0],
+          'quantity': 1
+          }]
+        };
         console.log('formData', formData.getAll('id'))
         console.log('nuevo test')
         fetch(`${routes.cart_add_url}`+ `.js`, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: {
          'items': [{
-          'id': JSON.stringify(formData.getAll('id')[0]),
+          'id': JSON.stringify(formData),
           'quantity': 1
           }]
         }})
