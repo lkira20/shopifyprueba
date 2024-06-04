@@ -22,7 +22,7 @@ if (!customElements.get('product-form')) {
         
           //obtengo el listado de productos
         fetch(`/clear.js`, {method: 'POST'})
-          .then((response){
+          .then(function(response){
             console.log('test ner', response.json())
           })
           /*
