@@ -43,7 +43,7 @@ if (!customElements.get('product-form')) {
 
         fetch(`${routes.cart_url}`+ `/clear.js`, {method: 'POST'})
         .then((response) => response.json())
-        .then(function(response){
+        .then((response) {
           fetch(`${routes.cart_add_url}`, config)
           .then((response) => response.json())
           .then((response) => {
@@ -100,8 +100,8 @@ if (!customElements.get('product-form')) {
             if (!this.error) this.submitButton.removeAttribute('aria-disabled');
             this.querySelector('.loading__spinner').classList.add('hidden');
           });
-          }
         })
+      }
 
       handleErrorMessage(errorMessage = false) {
         if (this.hideErrors) return;
