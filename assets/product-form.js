@@ -41,9 +41,9 @@ if (!customElements.get('product-form')) {
         }
         config.body = formData;
         fetch(`${routes.cart_url}`+ `/clear.js`, {method: 'POST'});
-        fetch(`${routes.cart_add_url}`+ `.js`, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(formData)})
+        fetch(`${routes.cart_add_url}`+ `.js`, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: formData})
         .then((response) => response.json())
-        then((response) => console.log(response))
+        .then((response) => console.log(response))
         
         console.log(`${routes.cart_add_url}`, 'test', formData.values())
         /*
