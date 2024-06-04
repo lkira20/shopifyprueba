@@ -40,7 +40,7 @@ if (!customElements.get('product-form')) {
           this.cart.setActiveElement(document.activeElement);
         }
         config.body = formData;
-        
+        /*
         fetch(`${routes.cart_add_url}`, config)
           .then((response) => response.json())
           .then((response) => {
@@ -97,7 +97,7 @@ if (!customElements.get('product-form')) {
             if (!this.error) this.submitButton.removeAttribute('aria-disabled');
             this.querySelector('.loading__spinner').classList.add('hidden');
           });
-
+        */
 
         
         console.log(`${routes.cart_url}`)
@@ -106,7 +106,7 @@ if (!customElements.get('product-form')) {
         .then(response => console.log(response))
         
         let updates = {
-          '40898110914654': 2,
+          '\40898110914654': 2,
           '40892894183518': 2
         };
         fetch(`${routes.cart_url}`+ `/update.js`, {method: 'POST', body: JSON.stringify({ updates })})
