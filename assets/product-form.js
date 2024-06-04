@@ -26,7 +26,21 @@ if (!customElements.get('product-form')) {
           .then((response) => {
             console.log(response.items)
             if(response.items.length > 0){
-              
+              console.log('segundo fetch', `${routes.cart_change_url}`)
+              /*
+              fetch(`${routes.cart_change_url}`)
+              .then((response) => response.json())
+              .then((response) => {
+                console.log(response.items)
+                if(response.items.length > 0){
+                  
+                }
+              })
+              .catch((e) => {
+                console.error(e);
+              }
+              )
+              */
             }
           })
           .catch((e) => {
