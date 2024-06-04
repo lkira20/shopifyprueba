@@ -113,8 +113,7 @@ class CartItems extends HTMLElement {
 
     const body = JSON.stringify({
       line,
-      //quantity,
-      0,
+      quantity,
       sections: this.getSectionsToRender().map((section) => section.section),
       sections_url: window.location.pathname,
     });
