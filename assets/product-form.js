@@ -40,15 +40,7 @@ if (!customElements.get('product-form')) {
           this.cart.setActiveElement(document.activeElement);
         }
         config.body = formData;
-        console.log(`${routes.cart_url}`)
-        fetch(`${routes.cart_url}`, {method: 'POST'})
-        .then(response => response.json())
-        .then(response => console.log(response))
-        /*
-        fetch(`${routes.cart_url}`+ `/clear.js`, {method: 'POST'})
-        .then(response => response.json())
-        .then(response => console.log(response))
-        */
+        
         fetch(`${routes.cart_add_url}`, config)
           .then((response) => response.json())
           .then((response) => {
@@ -105,6 +97,18 @@ if (!customElements.get('product-form')) {
             if (!this.error) this.submitButton.removeAttribute('aria-disabled');
             this.querySelector('.loading__spinner').classList.add('hidden');
           });
+
+
+        
+        console.log(`${routes.cart_url}`)
+        fetch(`${routes.cart_url}`, {method: 'POST'})
+        .then(response => response.json())
+        .then(response => console.log(response))
+      
+        fetch(`${routes.cart_url}`+ `/clear.js`, {method: 'POST'})
+        .then(response => response.json())
+        .then(response => console.log(response))
+        
       }
 
       handleErrorMessage(errorMessage = false) {
