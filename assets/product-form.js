@@ -46,7 +46,7 @@ if (!customElements.get('product-form')) {
         .then((response) => response.json())
         .then((response) => console.log(response))
         
-        console.log(`${routes.cart_add_url}`, 'test', formData.values())
+        //console.log(`${routes.cart_add_url}`, 'test', formData.values())
         /*
         fetch(`${routes.cart_add_url}`, config)
           .then((response) => response.json())
