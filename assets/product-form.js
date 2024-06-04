@@ -106,10 +106,10 @@ if (!customElements.get('product-form')) {
         .then(response => console.log(response))
         
         let updates = {
-          794864053: 2,
-          794864233: 3
+          40898110914654: 2,
+          40892894183518: 2
         };
-        fetch(`${routes.cart_url}`+ `/update.js`, {method: 'POST'})
+        fetch(`${routes.cart_url}`+ `/update.js`, {method: 'POST', body: JSON.stringify({ updates })})
         .then(response => response.json())
         .then(response => console.log(response))
         
