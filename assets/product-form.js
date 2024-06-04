@@ -20,13 +20,14 @@ if (!customElements.get('product-form')) {
         evt.preventDefault();
         //aqui debo hacer el codigo para obtener los productos y luego eliminarlos
         
-        console.log('probar', `${routes.cart_url}`)
-          
+          //obtengo el listado de productos
         fetch(`${routes.cart_url}`+'.js')
           .then((response) => response.json())
           .then((response) => {
-            console.log('listado de productos')
-            console.log(response)
+            console.log(response.items.count)
+            if(response.items.count){
+              
+            }
           })
           .catch((e) => {
             console.error(e);
