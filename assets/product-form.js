@@ -23,9 +23,7 @@ if (!customElements.get('product-form')) {
         console.log('probar', `${routes.cart_url}`)
           
         fetch(`${routes.cart_url}`+'.js')
-          .then((response) => console.log(response, 'test'))
-          //.then((response) => {})
-          /*
+          .then((response) => response.json())
           .then((response) => {
             console.log('listado de productos')
             console.log(response)
@@ -34,7 +32,6 @@ if (!customElements.get('product-form')) {
             console.error(e);
           }
           )
-          */
 
         //
         if (this.submitButton.getAttribute('aria-disabled') === 'true') return;
