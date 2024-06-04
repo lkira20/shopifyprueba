@@ -24,6 +24,9 @@ if (!customElements.get('product-form')) {
           
         fetch(`${routes.cart_url}`)
           .then((response) => response.json())
+          .then((response) => {
+
+          })
           /*
           .then((response) => {
             console.log('listado de productos')
