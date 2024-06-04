@@ -23,6 +23,7 @@ if (!customElements.get('product-form')) {
           //obtengo el listado de productos
         fetch(`/clear.js`, {method: 'POST'})
           .then((response) => response.json())
+          /*
           .then((response) => {
             console.log(response)
       
@@ -30,8 +31,8 @@ if (!customElements.get('product-form')) {
           .catch((e) => {
             console.error(e);
           }
-          )
-
+        )
+          */
         //
         if (this.submitButton.getAttribute('aria-disabled') === 'true') return;
 
