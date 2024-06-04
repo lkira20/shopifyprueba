@@ -50,7 +50,7 @@ if (!customElements.get('product-form')) {
         };
         console.log('body', body)
         console.log('segundo  test')
-        fetch(`${routes.cart_add_url}`+ `.js`, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(body)}})
+        fetch(`${routes.cart_add_url}`+ `.js`, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(body)})
         .then((response) => response.json())
         .then((response) => console.log(response))
         
