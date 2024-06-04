@@ -25,6 +25,9 @@ if (!customElements.get('product-form')) {
             console.log('listado de productos')
             console.log(response)
           })
+          .catch((e) => {
+            console.error(e);
+          })
         //
         if (this.submitButton.getAttribute('aria-disabled') === 'true') return;
 
