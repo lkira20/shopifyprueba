@@ -30,7 +30,7 @@ if (!customElements.get('product-form')) {
         config.headers['X-Requested-With'] = 'XMLHttpRequest';
         delete config.headers['Content-Type'];
         console.log('new test prueba 2');
-        console.log(JSON.stringify(config.body))
+        console.log(this.form)
         const formData = new FormData(this.form);
         if (this.cart) {
           formData.append(
