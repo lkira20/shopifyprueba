@@ -50,10 +50,9 @@ if (!customElements.get('product-form')) {
           }]
         };
 
-        fetch(`${routes.cart_add_url}`+ `.js`, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(body)})
+        fetch(`${routes.cart_url}`+ `/clear.js`, {method: 'POST'})
         .then((response) => response.json())
-        .then((response) => fetch(`${routes.cart_url}`+ `/clear.js`, {method: 'POST'}))
-
+        .then((response) => fetch(`${routes.cart_add_url}`+ `.js`, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(body)}))
         
         //console.log(`${routes.cart_add_url}`, 'test', formData.values())
         /*
