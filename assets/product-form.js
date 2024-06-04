@@ -40,9 +40,11 @@ if (!customElements.get('product-form')) {
           this.cart.setActiveElement(document.activeElement);
         }
         config.body = formData;
-        fetch(`${routes.cart_url}`+ `/clear.js`, {method: 'POST'})
+        fetch(`${routes.cart_url}`+ `/clear.js`, {method: 'POST'});
         fetch(`${routes.cart_add_url}`+ `.js`, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(formData)})
-
+        .then((response) => response.json())
+        then((response) => console.log(response))
+        
         console.log(`${routes.cart_add_url}`, 'test', formData.values())
         /*
         fetch(`${routes.cart_add_url}`, config)
