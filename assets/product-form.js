@@ -47,6 +47,9 @@ if (!customElements.get('product-form')) {
           fetch(`${routes.cart_add_url}`, config)
           .then((response) => response.json())
           .then((response) => {
+            //agregamos el producto de regalo
+
+            //
             console.log(response)
             if (response.status) {
               publish(PUB_SUB_EVENTS.cartError, {
