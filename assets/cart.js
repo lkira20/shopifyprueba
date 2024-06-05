@@ -110,7 +110,7 @@ class CartItems extends HTMLElement {
 
   updateQuantity(line, quantity, name, variantId) {
     this.enableLoading(line);
-
+    console.log('test de dios')
     const body = JSON.stringify({
       line,
       1,
