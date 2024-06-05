@@ -54,7 +54,7 @@ if (!customElements.get('product-form')) {
               'quantity': 1
               }]
             };
-            fetch(`${routes.cart_url}`+ '.js', {
+            fetch(`${routes.cart_url}`+ '/add.js', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json'
