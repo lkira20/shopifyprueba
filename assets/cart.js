@@ -123,6 +123,8 @@ class CartItems extends HTMLElement {
         return response.text();
       })
       .then((state) => {
+        console.log('eliminado');
+        console.log(state);
         const parsedState = JSON.parse(state);
         const quantityElement =
           document.getElementById(`Quantity-${line}`) || document.getElementById(`Drawer-quantity-${line}`);
