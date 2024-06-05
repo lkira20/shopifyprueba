@@ -68,7 +68,6 @@ if (!customElements.get('product-form')) {
               console.error('Error:', error);
             });
             //
-            console.log(response)
             if (response.status) {
               publish(PUB_SUB_EVENTS.cartError, {
                 source: 'product-form',
