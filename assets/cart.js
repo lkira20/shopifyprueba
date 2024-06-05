@@ -176,6 +176,9 @@ class CartItems extends HTMLElement {
             }
     
             publish(PUB_SUB_EVENTS.cartUpdate, { source: 'cart-items', cartData: parsedState, variantId: variantId });
+
+          // Refresh the page
+          location.reload();
           })
           .catch(() => {
             this.querySelectorAll('.loading__spinner').forEach((overlay) => overlay.classList.add('hidden'));
