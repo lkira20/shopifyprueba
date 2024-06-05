@@ -110,10 +110,10 @@ class CartItems extends HTMLElement {
 
   updateQuantity(line, quantity, name, variantId) {
     this.enableLoading(line);
-    console.log('test de dios')
+    console.log('tes de dios', quantity)
     const body = JSON.stringify({
       line,
-      1,
+      quantity,
       sections: this.getSectionsToRender().map((section) => section.section),
       sections_url: window.location.pathname,
     });
