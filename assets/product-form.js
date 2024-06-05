@@ -50,7 +50,7 @@ if (!customElements.get('product-form')) {
             //agregamos el producto de regalo
             let data = {
              'items': [{
-              'id': 7111192903774,
+              'id': 40892917186654,
               'quantity': 1
               }]
             };
