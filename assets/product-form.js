@@ -48,7 +48,25 @@ if (!customElements.get('product-form')) {
           .then((response) => response.json())
           .then((response) => {
             //agregamos el producto de regalo
-
+            let data = {
+             'items': [{
+              'id': 36110175633573,
+              'quantity': 1
+              }]
+            };
+            fetch(`${routes.cart_url}`+ '.js', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(data)
+            })
+            .then(response => {
+              return response.json();
+            })
+            .catch((error) => {
+              console.error('Error:', error);
+            });
             //
             console.log(response)
             if (response.status) {
