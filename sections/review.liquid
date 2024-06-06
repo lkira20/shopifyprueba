@@ -23,8 +23,8 @@
 {% endcomment %}
 
 {% for review in section.blocks %}
-  {% for comentario in review.settings %}
-  {{ comentario }}
+  {{ review.settings }}
+
   <div class="review">
     <div class="review-img">
       <img src="{{ review.imagen }}" alt="Imagen de la review">
@@ -37,7 +37,6 @@
       <p>{{ review.comentario }}</p>
     </div>
   </div>
-  {% endfor %}
 {% endfor %}
 
 {% schema %}
