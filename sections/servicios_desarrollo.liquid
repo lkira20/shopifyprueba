@@ -1,9 +1,3 @@
-"# shopifyprueba" 
-
-Esto es una prueba tecnica elaborada por luis briceño 
-
-- El schema par los servicios de desarrollo lo desarrolle fijandome del schema de feature schema, que es el que coloca los productos de una colleccion,
-en el json del schema con la propiedad presets lo hago visible para agregarlo en la seccion
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 
@@ -493,25 +487,3 @@ en el json del schema con la propiedad presets lo hago visible para agregarlo en
   ]
 }
 {% endschema %}
-
-
--el ajax que use para agregar un producto al carrito fue este 
-fetch(`${routes.cart_url}`+ '/add.js', {
-    method: 'POST',
-    headers: {
-    'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
-})
-.then(response => {
-    return response.json();
-})
-.catch((error) => {
-    console.error('Error:', error);
-});
--me ayudo bastante a la hora de agregar el producto de regalo cuando se agregara un servicio al carrito
-
--Para que el carrito solo permita añadir un producto al carrito sencillmaente cada vez q añadiera un producto al carrito previamente elimino todos los productos del carrito con este codigo fetch(`${routes.cart_url}`+ `/clear.js`, {method: 'POST'}) , luego en la promesa devuelta(then) continuo con el proceso de añadir al carrito
--Para que solo se puediera añadir la cantidad de un producto al carrito, modfifique el input de cantidad y le puse el atributo max 1
-
--

@@ -41,9 +41,33 @@ if (!customElements.get('product-form')) {
         }
         config.body = formData;
 
-        fetch(`${routes.cart_add_url}`, config)
+        fetch(`${routes.cart_url}`+ `/clear.js`, {method: 'POST'})
+        .then((response) => response.json())
+        .then((response) => {
+          fetch(`${routes.cart_add_url}`, config)
           .then((response) => response.json())
           .then((response) => {
+            //agregamos el producto de regalo
+            let data = {
+             'items': [{
+              'id': 40892917186654,
+              'quantity': 1
+              }]
+            };
+            fetch(`${routes.cart_url}`+ '/add.js', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(data)
+            })
+            .then(response => {
+              return response.json();
+            })
+            .catch((error) => {
+              console.error('Error:', error);
+            });
+            //
             if (response.status) {
               publish(PUB_SUB_EVENTS.cartError, {
                 source: 'product-form',
@@ -97,6 +121,7 @@ if (!customElements.get('product-form')) {
             if (!this.error) this.submitButton.removeAttribute('aria-disabled');
             this.querySelector('.loading__spinner').classList.add('hidden');
           });
+        })
       }
 
       handleErrorMessage(errorMessage = false) {

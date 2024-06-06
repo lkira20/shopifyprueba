@@ -1,0 +1,80 @@
+
+<div style="margin-left: 200px; right: 200px;">
+  <h2>{{ section.settings.comentario }}</h2>
+  {% for review in section.blocks %}
+    <div class="review">
+      {% if review.settings.image %}
+      <div class="review-img">
+        <img src="{{ review.settings.image | img_url: 'master' }}" alt="Imagen de la review" width="200">
+      </div>
+      {% endif %}
+      <div class="review-info">
+        {% if review.settings.Nombre %}
+          <h3>{{ review.settings.Nombre }}</h3>
+        {% endif %}
+        <div class="stars">
+          {% if review.settings.estrellas %}
+            <span class="star">{{ review.settings.estrellas }}&#9733;</span>
+          {% endif %}
+        </div>
+        {% if review.settings.comentario %}
+          <p>{{ review.settings.comentario }}</p>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% schema %}
+{
+  "name": "Review",
+  "tag": "section",
+  "class": "slideshow",
+  "max_blocks": 5,
+  "settings": [
+    {
+      "type": "text",
+      "id": "comentario",
+      "label": "Comentario",
+      "info" : "Comentario info"
+    }
+  ],
+  "blocks": [
+     {
+       "name": "comentario",
+       "type": "slide",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "image",
+           "label": "Image"
+         },
+         {
+            "type": "text",
+            "id": "Nombre",
+            "label": "Nombre"
+          },
+         {
+            "type": "textarea",
+            "id": "comentario",
+            "label": "comentario"
+        },
+         {
+          "type": "number",
+          "id": "estrellas",
+          "label": "estrellas"
+        }
+       ]
+     }
+  ],
+  "presets": [
+    {
+      "name": "Review",
+      "blocks": [
+        {
+        "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
