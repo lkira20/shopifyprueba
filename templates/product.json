@@ -114,7 +114,28 @@
     },
     "review_NfNxFf": {
       "type": "review",
+      "blocks": {
+        "slide_j9xMrK": {
+          "type": "slide",
+          "settings": {
+            "Nombre": "",
+            "comentario": ""
+          }
+        },
+        "slide_PnxN6U": {
+          "type": "slide",
+          "settings": {
+            "Nombre": "",
+            "comentario": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_j9xMrK",
+        "slide_PnxN6U"
+      ],
       "settings": {
+        "comentario": ""
       }
     }
   },
