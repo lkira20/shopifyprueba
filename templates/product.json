@@ -118,6 +118,15 @@
         "slide_j9xMrK": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/develop_3535975c-bf25-40a1-a3f2-29431070eaea.jpg",
+            "Nombre": "titulo",
+            "comentario": "comentario de prueba",
+            "estrellas": 5
+          }
+        },
+        "slide_88aext": {
+          "type": "slide",
+          "settings": {
             "Nombre": "",
             "comentario": ""
           }
@@ -132,6 +141,7 @@
       },
       "block_order": [
         "slide_j9xMrK",
+        "slide_88aext",
         "slide_PnxN6U"
       ],
       "settings": {
