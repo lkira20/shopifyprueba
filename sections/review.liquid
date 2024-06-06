@@ -1,59 +1,81 @@
+{% comment %}
+  Ejemplo de estructura de datos para las reviews:
+  reviews = [
+    {
+      "imagen": "url_de_la_imagen_1",
+      "nombre": "Usuario1",
+      "estrellas": 4,
+      "comentario": "Este producto es increíble. ¡Lo recomiendo altamente!"
+    },
+    {
+      "imagen": "url_de_la_imagen_2",
+      "nombre": "Usuario2",
+      "estrellas": 5,
+      "comentario": "¡Simplemente perfecto! No podría estar más feliz con mi compra."
+    },
+    {
+      "imagen": "url_de_la_imagen_3",
+      "nombre": "Usuario3",
+      "estrellas": 3,
+      "comentario": "Buen producto, aunque esperaba un poco más por el precio."
+    }
+  ]
+{% endcomment %}
 
-{% for block in section.blocks %}
-  {% case block.type %}
-    {% when 'slide' %}
-      <div class="slide" {{ block.shopify_attributes }}>
-        {{ block.settings.image | image_url: width: 2048 | image_tag }}
+{% for review in reviews %}
+  <div class="review">
+    <div class="review-img">
+      <img src="{{ review.imagen }}" alt="Imagen de la review">
+    </div>
+    <div class="review-info">
+      <h3>{{ review.nombre }}</h3>
+      <div class="stars">
+        <span class="star">{{ review.estrellas }}&#9733;</span>
       </div>
-    ...
-  {% endcase %}
+      <p>{{ review.comentario }}</p>
+    </div>
+  </div>
 {% endfor %}
 
-<div>
-  <img src="/imagen.png"> </img>
-  <span>Nombre del cliente</span>
-  <span>Estrellas: 5</span>
-  <p>Review comenteario</p>
-</div>
 {% schema %}
-  {
-    "name": "Review",
-    "tag": "section",
-    "class": "slideshow",
-    "max_blocks": 5,
-    "settings": [
-      {
-        "type": "text",
-        "id": "comentario",
-        "label": "Comentario",
-        "info" : "Comentario info"
-      }
-    ],
-    "blocks": [
-       {
-         "name": "Slide",
-         "type": "slide",
-         "settings": [
-           {
-             "type": "image_picker",
-             "id": "image",
-             "label": "Image"
-           }
-         ]
-       }
-    ],
-    "presets": [
-      {
-        "name": "Review",
-        "blocks": [
-          {
-          "type": "slide"
-          },
+{
+  "name": "Review",
+  "tag": "section",
+  "class": "slideshow",
+  "max_blocks": 5,
+  "settings": [
+    {
+      "type": "text",
+      "id": "comentario",
+      "label": "Comentario",
+      "info" : "Comentario info"
+    }
+  ],
+  "blocks": [
+     {
+       "name": "Slide",
+       "type": "slide",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "image",
+           "label": "Image"
+         }
+       ]
+     }
+  ],
+  "presets": [
+    {
+      "name": "Review",
+      "blocks": [
         {
-          "type": "slide"
-        }
-        ]
+        "type": "slide"
+        },
+      {
+        "type": "slide"
       }
-    ]
-  }
+      ]
+    }
+  ]
+}
 {% endschema %}
