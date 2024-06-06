@@ -26,6 +26,7 @@
         "heading",
         "button"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/develop_3535975c-bf25-40a1-a3f2-29431070eaea.jpg",
         "image_overlay_opacity": 20,
@@ -42,6 +43,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Productos",
         "heading_size": "h2",
