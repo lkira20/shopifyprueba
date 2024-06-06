@@ -124,14 +124,7 @@
             "estrellas": 5
           }
         },
-        "slide_88aext": {
-          "type": "slide",
-          "settings": {
-            "Nombre": "",
-            "comentario": ""
-          }
-        },
-        "slide_PnxN6U": {
+        "slide_6YHHDD": {
           "type": "slide",
           "settings": {
             "Nombre": "",
@@ -141,8 +134,7 @@
       },
       "block_order": [
         "slide_j9xMrK",
-        "slide_88aext",
-        "slide_PnxN6U"
+        "slide_6YHHDD"
       ],
       "settings": {
         "comentario": ""
