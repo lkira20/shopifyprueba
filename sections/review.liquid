@@ -25,7 +25,7 @@
 {% for review in section.blocks %}
   <div class="review">
     <div class="review-img">
-      <img src="{{ review.settings.image }}" alt="Imagen de la review">
+      <img src="{{ review.settings.image.src }}" alt="Imagen de la review">
     </div>
     <div class="review-info">
       <h3>{{ review.settings.Nombre }}</h3>
