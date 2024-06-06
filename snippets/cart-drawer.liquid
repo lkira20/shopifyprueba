@@ -288,7 +288,7 @@
                                     </span>
                                     {% render 'icon-minus' %}
                                   </button>
-                                  <input
+                                  <input 
                                     class="quantity__input"
                                     type="number"
                                     data-quantity-variant-id="{{ item.variant.id }}"
@@ -299,7 +299,7 @@
                                     min="0"
                                     data-min="{{ item.variant.quantity_rule.min }}"
                                     {% if item.variant.quantity_rule.max != null %}
-                                      max="{{ item.variant.quantity_rule.max }}"
+                                      max="1"
                                     {% endif %}
                                     step="{{ item.variant.quantity_rule.increment }}"
                                     {% # theme-check-enable %}
