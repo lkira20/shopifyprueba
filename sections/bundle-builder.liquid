@@ -10,6 +10,18 @@
       {% endfor %}
     </select>
   </div>
+
+  <div>
+    <label for="group-2">Group 2</label>
+    <select id="group-2"> 
+      {% for product in collections.all.products %}
+        {% if product.tags contains "Group 2" %}
+          {% assign variant = product.selected_or_first_available_variant %}
+              <option value="{{ variant.id }}">{{ product.title }} - {{ varian.price | money }}</option>
+        {% endif %}
+      {% endfor %}
+    </select>
+  </div>
 </form>
 
 {% schema %}
