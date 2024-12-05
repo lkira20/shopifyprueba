@@ -1,13 +1,14 @@
 <form id="bundle-form">
   <div>
     <label for="group-1">Group 1</label>
-    
-    {% for product in collections.all.products %}
-      {% if product.tags contains "Group 1" %}
-        {% assign variant = product.selected_or_first_available_variant %}
-            <option value="{{ variant.id }}">{{ product.title }} - {{ varian.price | money }}</option>
-      {% endif %}
-    {% endfor %}
+    <select id="group-1"> 
+      {% for product in collections.all.products %}
+        {% if product.tags contains "Group 1" %}
+          {% assign variant = product.selected_or_first_available_variant %}
+              <option value="{{ variant.id }}">{{ product.title }} - {{ varian.price | money }}</option>
+        {% endif %}
+      {% endfor %}
+    </select>
   </div>
 </form>
 
