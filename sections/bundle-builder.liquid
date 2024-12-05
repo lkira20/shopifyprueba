@@ -30,6 +30,7 @@
     const form = document.getElementById('bundle-form');
 
     form.addEventListener("submi", async(e) => {
+      e.preventDefault();
       const group1 = document.getElementById('group-1').value;
       const group2 = document.getElementById('group-2').value;
 
