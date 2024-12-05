@@ -1,5 +1,18 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
+    "bundle_builder_nrLq6X": {
+      "type": "bundle-builder",
+      "settings": {}
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -14,7 +27,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Ver todos",
-            "button_link_1": "shopify:\/\/collections\/servicios-de-desarrollo",
+            "button_link_1": "shopify://collections/servicios-de-desarrollo",
             "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
@@ -28,7 +41,7 @@
       ],
       "disabled": true,
       "settings": {
-        "image": "shopify:\/\/shop_images\/develop_3535975c-bf25-40a1-a3f2-29431070eaea.jpg",
+        "image": "shopify://shop_images/develop_3535975c-bf25-40a1-a3f2-29431070eaea.jpg",
         "image_overlay_opacity": 20,
         "image_height": "small",
         "desktop_content_position": "bottom-center",
@@ -104,7 +117,7 @@
         "slide_fR3jXk": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lunch.png",
+            "image": "shopify://shop_images/lunch.png",
             "Nombre": "asdas",
             "comentario": "qwe",
             "estrellas": 5
@@ -128,6 +141,7 @@
     }
   },
   "order": [
+    "bundle_builder_nrLq6X",
     "image_banner",
     "featured_collection",
     "servicios_desarrollo_TAjBpN",
