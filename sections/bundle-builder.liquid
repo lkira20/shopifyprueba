@@ -5,7 +5,7 @@
       {% for product in collections.all.products %}
         {% if product.tags contains "Group 1" %}
           {% assign variant = product.selected_or_first_available_variant %}
-              <option value="{{ variant.id }}">{{ product.title }} - {{ varian.price | money }}</option>
+              <option value="{{ variant.id }}">{{ product.title }} - {{ variant.price | money }}</option>
         {% endif %}
       {% endfor %}
     </select>
@@ -17,7 +17,7 @@
       {% for product in collections.all.products %}
         {% if product.tags contains "Group 2" %}
           {% assign variant = product.selected_or_first_available_variant %}
-              <option value="{{ variant.id }}">{{ product.title }} - {{ varian.price | money }}</option>
+              <option value="{{ variant.id }}">{{ product.title }} - {{ variant.price | money }}</option>
         {% endif %}
       {% endfor %}
     </select>
